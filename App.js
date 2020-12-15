@@ -1,19 +1,30 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {createAppContainer} from 'react-navigation';
+import {createStackNavigator} from 'react-navigation-stack'; 
+import MainScreen from './src/screens/MainScreen';
+import InfoScreen from './src/screens/InfoScreen';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
-  );
-}
+const navigator = createStackNavigator({
+    Counter:MainScreen,
+    Info:{
+        screen:InfoScreen,
+        navigationOptions: { title: ""},
+    }
+}, 
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+
+{
+  initialRouteName:'Counter',
+  defaultNavigationOptions:{
+    headerTitleStyle: { alignSelf:"center" },
+    title:"Snack Counter",
+    headerStyle: {
+      backgroundColor: "black",
+    },
+    headerTintColor:"white"
   },
-});
+
+
+
+}); 
+
+export default createAppContainer(navigator); 
