@@ -1,5 +1,6 @@
 {
   "expo": {
+    "scheme": "myapp",
     "name": "Snack Counter",
     "slug": "Snack-Counter",
     "platforms": [
@@ -23,12 +24,12 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "YSM-Counter-App"
+      "bundleIdentifier": "com.geralddarroles.ysmsnackcounter",
+      "buildNumber": "1.00"
     },
-  "android": {
-    "package": "com.YongeStreetMission.YSMSnackCounter",
-    "versionCode": 1
-  } 
+    "android": {
+      "package": "com.geralddarroles.ysmsnackcounter",
+      "versionCode": 1
+    }
   }
-  
 }

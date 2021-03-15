@@ -27,7 +27,6 @@ const styles = StyleSheet.create({
 
     totalLabel:{
         fontSize:20,
-        marginLeft:15,
         color: "white",
         flexWrap: 'wrap'
 
