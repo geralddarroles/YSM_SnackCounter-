@@ -26,15 +26,7 @@ export default function ({ navigation }) {
                     />
                 </TouchableOpacity>
             ),
-            headerLeft: () => (
 
-                <Button
-                    title="Edit"
-                    onPress={() => navigation.navigate("EditScreen")}
-                    style={{ marginLeft: "20", color: "white" }}
-                />
-
-            )
         });
     }, [navigation]);
 
@@ -210,21 +202,6 @@ export default function ({ navigation }) {
 
 
 
-    const addMemberWorkfolow = async () => {
-
-        const inviteLink = Linking.makeUrl("info");
-
-        try {
-            const result = await Share.share({ message: inviteLink, title: "Join the Android Group" }, { subject: "Join the ios group" });
-            if (result.action === Share.sharedAction) {
-                alert("Invite sent")
-            } else if (result.action === Share.dismissedAction) {
-                alert("Invite not sent, please try again later ")
-            }
-        } catch (error) {
-            alert("Invite not sent, try again later" + error)
-        }
-    }
 
 
 
@@ -239,7 +216,7 @@ export default function ({ navigation }) {
             <CurrentTime
                 time={time}
             />
-            <Button title="button" onPress={() => { addMemberWorkfolow() }} />
+       
             {/* Displays the Visitor section and the manual buttons  */}
             <View style={styles.DisplayCountBlock}>
                 <View style={styles.DisplayCount}>
